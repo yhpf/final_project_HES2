@@ -1,0 +1,24 @@
+.card-body {
+	background-color: #ffb3ba; /* pastel red */
+	margin-right: 0.5rem;
+	margin-bottom: 1rem;
+	padding: 1.5rem;
+	border-radius: 30px;
+}
+
+h5 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+
+.btn {
+	background-color: #808080; /* grey */
+  	border: none;
+  	border-radius: 0rem;
+  	padding: 0.2em 0.5em;
+  	text-align: center;
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: #FFFFFF; /* white */
+  	margin-right: 0.5em;
+}

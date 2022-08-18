@@ -1,0 +1,20 @@
+.kindoflikeheader {
+	background-color: #baffc9; /* pastel green */
+	margin: 0rem 3rem; /* top/bottom left/right */
+	padding: 2rem 2rem 2rem 2rem;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	margin: 0rem 2rem 1rem 2rem; /* top right bottom left */
+}
+
+ p {
+ 	margin: 0rem 2rem 0rem 2rem; /* top right bottom left */
+ }
+
+ .container {
+	margin-left: 2rem;
+}

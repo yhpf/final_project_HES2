@@ -1,0 +1,31 @@
+<!-- This is where you add a new todo item -->
+<div>
+  	<h3>Please add all the stuff that you need to do...</h3>
+  	<form #newtodoitemForm="ngForm" (ngSubmit)="save(newtodoitemForm)">
+	    <div>
+	        <label>Title:
+	          	<input required minlength="2" #title="ngModel" placeholder="My todo item" name="title" class="form-control" [(ngModel)]="todo.title">
+	        </label>
+	        <div *ngIf="title.invalid && (title.dirty || title.touched)" class="alert alert-danger">
+	         	<div *ngIf="title.errors && title.errors['minlength']">
+	            	Title must be at least 2 characters long.
+	          	</div>
+	        </div>
+	        <br>
+	        <label>Description:
+	          	<!-- <input placeholder="This I have to do..." name="description" class="form-control" [(ngModel)]="todo.description"> -->
+	          	<textarea placeholder="This I have to do..." name="description" class="form-control" [(ngModel)]="todo.description"></textarea>
+	        </label>
+	        <br>
+	        <label>Attachment:
+	        	<p class="filetext">(Supported file types .jpg .jpeg .txt .doc .pdf .xls)</p>
+	          	<input type="file" name="file" (change)="handleFileInput($event.target)">
+	        </label>
+	        <br>
+	        <label>Deadline:
+	          	<input type="date" name="duedate" class="form-control" value=Date() [(ngModel)]="todo.duedate">
+	        </label>
+	    </div>
+	    <button type="submit" class="btn btn-primary" [disabled]="!newtodoitemForm.valid">Save</button>
+  	</form>
+</div>

@@ -1,0 +1,39 @@
+<!-- This index.html file is the interface for testing the Todo API app. The JS code can be found in apitest.js -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Testing API</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3 style="margin-top: 2rem;">Test that the API for the Todo app is working</h3>
+      <p>
+        This HTML/JS page will test the Todo API by listing all; then creating, finding, modifying, and deleting a todo attachment resource using the REST API.
+      </p>
+      <p>
+        The Todo application item has a Title, a Description, an Attachment, and a Deadline date.
+        This test will be focused around the todo attachment file and the title, description, and deadline values will be added  in the apitest.js file. 
+      </p>
+      <p>
+      Please follow these steps to test:
+        <ol>
+          <li>Make sure the Todo application is up and running. Can be done by opening the application in your browser.</li>
+          <li>Make sure this test page is open via a file extension.</li>
+          <li>Open the Inspector and then choose to view the Console</li>
+          <li>See the Console for output as the process completes. (The process should complete without errors.)</li>
+        </ol>
+      </p>
+      <!-- Test that the file attachment is working -->
+      <p style="font-weight: bold;">Test that the file upload works</p>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group"><label for="file">File:</label><input class="form-control" id="file" type="file" name="file"></div>
+            <button class="btn btn-primary" id="testbutton" type="button">Test API</button>
+        </div>
+      </div>
+
+    </div>  <!-- Closing the container div -->
+    <script type="text/javascript" src="js/apitest.js"></script>
+  </body>
+</html>

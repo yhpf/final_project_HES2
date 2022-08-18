@@ -1,0 +1,14 @@
+//-
+	inputed done items for todolist.pug
+
+h3 Done items by #{date}
+
+.row
+	each item in forminput
+		.col-sm-4
+			div(class="todo-box todo-"+item.done)
+				p#todoboxtitle #{item.title}
+				p Deadline: #{moment(item.duedate).format("YYYY-MM-DD")}
+				p #{item.description}
+				p File name: #{item.originalname}
+				p Modified: #{moment(item.updatedAt).format("YYYY-MM-DD HH:mm")}

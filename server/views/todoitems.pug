@@ -1,0 +1,21 @@
+//-
+	inputed to do items for index.pug
+
+h4 To-do list
+
+.row
+	each item in forminput
+		.col-sm-4
+			div(class="todo-box todo-"+item.done)
+				p#todoboxtitle #{item.title}
+				p Deadline: #{moment(item.duedate).format("YYYY-MM-DD")}
+				p #{item.description}
+				p File name: #{item.originalname}
+				p Created: #{moment(item.createdAt).format("YYYY-MM-DD HH:mm")}
+				p Modified: #{moment(item.updatedAt).format("YYYY-MM-DD HH:mm")}
+				form.formdone(method='POST' action="/index/done/"+item._id)
+					input.done(type='submit', value='Done')
+				a(href="/index/"+item._id)
+					button.edit(type="button") Edit
+				form.formdelete(method='POST' action="/index/delete/"+item._id)
+					input.delete(type='submit', value='Delete')

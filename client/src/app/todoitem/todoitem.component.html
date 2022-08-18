@@ -1,0 +1,37 @@
+<!-- This is the details page -->
+<!-- Info about the todo item and function to EDIT or GO BACK -->
+<div class="details">
+	<div *ngIf="todo">
+	  	<h3> Details for {{ todo.title }}:</h3>
+	  	<!-- This is what we see if we are not editing -->
+	  	<div *ngIf="!editing">
+		    <div><span><strong>Title: </strong></span> {{ todo.title }}</div>
+		    <div><span><strong>Description: </strong></span>{{ todo.description }}</div>
+		    <br>
+		    <p>Other info about your to-do item:</p> 
+		    <div><span><strong>Deadline: </strong></span>{{ todo.duedate | date:'MM-dd-yyyy' }}</div>
+		    <div><span><strong>File: </strong></span>{{todo.originalname}}</div>    
+		    <div><span><strong>Modified: </strong></span>{{ todo.updatedAt | date:'MM-dd-yyyy' }}</div>
+		    <div><span><strong>Created: </strong></span>{{ todo.createdAt | date:'MM-dd-yyyy' }}</div>
+		    <button class="btn btn-link" (click)="setEditMode(true)">Edit</button>
+		    <a class="btn btn-link" routerLink="/todolist">Back</a>
+	  	</div>
+	</div>
+	<!-- This is what we see after pressing edit button -->
+	<div *ngIf="editing">
+	  	<form #form="ngForm" (ngSubmit)="updateTodo(form.value)">
+	  		<div class="form-group">
+	       	 <label for="titleField"><strong>Title:</strong></label>
+	        	<input #title name="titleField" class="form-control" [ngModel]="todo.title">
+	        	<br>
+	        	<label for="descField"><strong>Description:</strong></label>
+	        	<!-- <input name="descField" class="form-control" [ngModel]="todo.description"> -->
+	        	<textarea name="descField" class="form-control" [ngModel]="todo.description"></textarea>
+	    	</div>
+	    	<br>
+	    	<button class="btn" type="submit">Save</button>
+	    	<button class="btn" type="button" (click)="setEditMode(false)">Cancel</button>
+	    	<button class="btn" type="button" (click)="deleteTodo()">Delete</button>
+	 	</form>
+	</div>
+</div>

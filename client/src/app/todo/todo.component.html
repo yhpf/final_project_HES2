@@ -1,0 +1,23 @@
+<!-- This is the actuall todo item card -->
+<div class='card-body'>
+	<h5 class='card-title'>{{todo.title}}</h5>
+  	<p class='card-text'>{{todo.description}}</p> 
+  	<p class='card-date'><strong>Deadline:</strong><br>{{todo.duedate | date:'MM-dd-yyyy'}}</p>
+
+  	<!-- if image file - show image -->
+  	<!-- the only image file types in express app supported are .jpeg and .jpg -->
+  	<ng-template [ngIf]="todo.filename.endsWith('.jpeg') || todo.filename.endsWith('.jpg')" [ngIfElse]="showFilename">
+  		<div><p><strong>Attached file:</strong><br><a href="{{todo.displayurl}}" target="_blank">{{todo.originalname}}</a></p></div>
+  		<img  class='card-img-top' 
+  		[src]='todo.displayurl'
+  		style='max-height:350px;max-width:250px;margin-top:30px;'>
+  	</ng-template>
+  	<!-- else show name of file + link to file so user can view it -->
+  	<ng-template #showFilename>
+ 		<div><p><strong>Attached file:</strong><br><a href="{{todo.displayurl}}" target="_blank">{{todo.originalname}}</a></p></div>
+	</ng-template>
+
+  	<br><br>
+  	<button (click)='done(todo.title)' class="btn">{{itemsdone}}</button>
+  	<a class="btn btn-link" routerLink="/tododetails/{{todo._id}}">Details</a>
+</div>

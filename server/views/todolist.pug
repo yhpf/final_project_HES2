@@ -1,0 +1,14 @@
+//-
+	pug template for second page for listing done todo items
+	layout in layout2.pug
+
+extends layout2
+
+block content
+	h1 List of to-do items that are done
+	p.donetext Smile and be happy over what an amazing job you have done!
+
+	include doneitems
+
+	br
+	a.tofirstpage(href="/index") Go Back to To-do list

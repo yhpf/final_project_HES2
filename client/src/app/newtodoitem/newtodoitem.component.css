@@ -1,0 +1,39 @@
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	margin: 2rem 2rem 1rem 0rem; /* top right bottom left */
+}
+
+label {
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+input, textarea {
+	background-color: #ffffba; /* pastel yellow */
+	border-radius: 30px;
+	border: none;
+	width: 25rem;
+	padding: 0.5rem 1rem 0.5rem 1rem; /* top right bottom left */
+}
+
+textarea {
+	height: 8rem;
+}
+
+.filetext {
+	font-weight: normal;
+	margin-bottom: 1rem;
+}
+
+.btn {
+	background-color: #808080; /* grey */
+  	border: none;
+  	border-radius: 0rem;
+  	padding: 0.2em 0.5em;
+  	text-align: center;
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: #FFFFFF; /* white */
+  	margin-right: 0.5em;
+}

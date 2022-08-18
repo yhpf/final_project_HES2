@@ -1,0 +1,19 @@
+<!-- This is the part of page where we present our stuff -->
+<!-- This is the actuall todo item cards are shown in the app-todo part -->
+<!-- The creat new todo item is shown in the app-newtodoitem part -->
+<div class="container">
+	<app-newtodoitem (newTodo)="updateTodoList()"></app-newtodoitem>
+	<h3>My to-do items for {{currentDate | date:'MM-dd-yyyy'}}</h3>
+	<p>
+		Number of Todo Items: {{numTodoItems}} &#8226; Total items done: {{totalItemsDone}} &#8226; Most recent item done/not done: {{mostRecentItemDone}}
+	</p>
+
+	<div class="row">
+		<app-todo class="col-sm-3"
+ 		*ngFor = 'let todoObject of todoList'
+  		[todo]='todoObject'
+  		[baseUrl]='fileUrl'
+  		(doneEvent)='handleDone($event)'>
+		</app-todo>
+	</div>
+</div>

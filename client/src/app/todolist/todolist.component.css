@@ -1,0 +1,17 @@
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	margin: 2rem 2rem 1rem 0rem; /* top right bottom left */
+}
+
+/* Thank you Artie for the awesome flex help below! */
+
+.cards {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+app-todo {
+	flex-basis: 30%;
+}

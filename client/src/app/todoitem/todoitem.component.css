@@ -1,0 +1,36 @@
+.details {
+	margin-left: 1rem;
+	width: 50%;
+}
+
+h3 {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	margin: 2rem 2rem 1rem 0rem; /* top right bottom left */
+}
+
+input, textarea {
+	background-color: #bae1ff; /* pastel blue */
+	border-radius: 30px;
+	border: none;
+	width: 25rem;
+	padding: 0.5rem 1rem 0.5rem 1rem; /* top right bottom left */
+}
+
+textarea {
+	height: 8rem;
+}
+
+.btn {
+	background-color: #808080; /* grey */
+  	border: none;
+  	border-radius: 0rem;
+  	padding: 0.2em 0.5em;
+  	text-align: center;
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: #FFFFFF; /* white */
+  	margin-right: 0.5em;
+  	margin-top: 1rem;
+  	margin-bottom: 2rem;
+}
